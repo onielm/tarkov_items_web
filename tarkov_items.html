@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <title>Tarkov Items</title>
+    <style>
+      div.backPanel {
+        background-color: black;
+        overflow: auto;
+        white-space: nowrap;
+        padding: 10px;
+        width: 80%;
+        margin-bottom: 50px;
+      }
+      div.vendorPanel {
+        display: inline-block;
+        width: 400px;
+        color: black;
+        background-color: grey;
+        padding: 5px;
+        text-decoration: none;
+        white-space: normal;
+      }
+      div.vendorInfo {
+        color: black;
+        width: auto;
+        padding: 10px;
+        text-decoration: none;
+        margin-bottom: 5px;
+        padding: 0px;
+        padding-right: 10px;
+      }
+      div.vendorName {
+        color: black;
+        width: 80%;
+        font-size: 32px;
+        font-weight: bold;
+        padding: 10px;
+        text-decoration: none;
+        margin-bottom: 5px;
+        text-align: center;
+      }
+      div.vendorImage {
+        width: 20%;
+      }
+      div.itemCard {
+        color: black;
+        width: auto;
+        height: 135px;
+        padding: 10px;
+        text-decoration: none;
+        background-color: red;
+        border: solid black 5px;
+        margin-bottom: 5px;
+      }
+      div.buttons {
+        padding: 0px;
+        width: 30%;
+      }
+      div.itemImage {
+        width: auto;
+        max-width: 40%;
+        height: auto;
+      }
+      .imag {
+        width: auto;
+        height: 105px;
+      }
+      div.itemInfo {
+        width: 30%;
+        height: 100%;
+      }
+      div.itemText {
+        width: 100%;
+        height: 70%;
+      }
+      .icon {
+      }
+      div.itemCraft {
+        width: 50%;
+        height: 30%;
+      }
+      div.itemKappa {
+        width: 50%;
+        height: 30%;
+      }
+      button.setStatus {
+        width: 90%;
+        color: black;
+        font-weight: bold;
+        padding: 5px;
+        text-decoration: none;
+      }
+      button.notFound {
+        background-color: red;
+      }
+      button.inStash {
+        background-color: yellow;
+      }
+      button.turnedIn {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="jumbotron text-center">
+      <h1>Tarkov Items</h1>
+      <p>Items needed to be found in-raid for quests</p>
+    </div>
+    <div class="container backPanel">
+      <div class="col-sm vendorPanel" id="prapor">
+        <div class="col-sm vendorInfo">
+          <div class="container-fluid">
+            <div class="col-sm-4 vendorName">
+              Prapor
+            </div>
+            <div class="col-sm-4 vendorImage">
+              <img alt="Prapor"
+              src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/6/6b/Prapor_Portrait.png/revision/latest/scale-to-width-down/130?cb=20180425012550"
+              decoding="async" title="Prapor" width="80" height="80">
+            </div>
+          </div>
+        </div>
+        <div class="col-sm itemCard" id="60rounds">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-4 buttons">
+                <button class="setStatus notFound" type="button" name="button">Not Found</button><br>
+                <button class="setStatus inStash" type="button" name="button">In Stash</button><br>
+                <button class="setStatus turnedIn" type="button" name="button">Turned In</button>
+              </div>
+              <div class="col-sm-4 itemImage">
+                <img class="imag" alt="6L31-60-mag icon.png"
+                src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/d/d7/6L31-60-mag_icon.png/revision/latest/scale-to-width-down/64?cb=20190915092935"
+                decoding="async" width="64" height="127">
+              </div>
+              <div class="col-sm-4 itemInfo">
+                <div class="itemText">
+                  <p>
+                    1x 60-round 6L31 5.45x39 magazine
+                  </p>
+                </div>
+                <div class="col-sm-2 itemCraft">
+                  <img class="icon" alt="6L31-60-mag icon.png"
+                  src="https://github.com/onielm/tarkov_items_web/blob/main/images/not_kappa.png?raw=true"
+                  decoding="async" width="25" height="25">
+                </div>
+                <div class="col-sm-2 itemKappa">
+                  <img class="icon" alt="6L31-60-mag icon.png"
+                  src="https://github.com/onielm/tarkov_items_web/blob/main/images/tools.png?raw=true"
+                  decoding="async" width="25" height="25">
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm itemCard">
+          test 1
+        </div>
+        <div class="col-sm itemCard">
+          test 1
+        </div>
+        <div class="col-sm itemCard">
+          test 1
+        </div>
+      </div>
+      <div class="col-sm vendorPanel">
+        <div class="col-sm itemCard">
+          test 2
+        </div>
+        <div class="col-sm itemCard">
+          test 2
+        </div>
+        <div class="col-sm itemCard">
+          test 2
+        </div>
+        <div class="col-sm itemCard">
+          test 2
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
+<script type="text/javascript">
+
+$( document ).ready(function() {
+
+  var x = { ...localStorage };
+  console.log(x);
+
+  $.each(x, function( key, status ) {
+    var keySplit = key.split("///");
+    var vendor = keySplit[0];
+    var item = keySplit[1];
+
+    if(status == "0"){
+      var cardId = "#"+vendor+" #"+item;
+      var itemCard = $(cardId);
+      itemCard.css("background-color", "red");
+      console.log(cardId);
+      console.log("red");
+    }else if(status == "1"){
+      var cardId = "#"+vendor+" #"+item;
+      var itemCard = $(cardId);
+      itemCard.css("background-color", "yellow");
+      console.log(cardId);
+      console.log("yellow");
+    }else if(status == "2"){
+      var cardId = "#"+vendor+" #"+item;
+      var itemCard = $(cardId);
+      itemCard.css("background-color", "green");
+      console.log(cardId);
+      console.log("green");
+    }
+  });
+
+
+  $(".setStatus").on("click", function(){
+    var itemCard = $(this).parent().parent().parent().parent();
+    var buttonType = $(this).attr("class");
+    buttonType = buttonType.split(" ")[1];
+
+    if(buttonType == "notFound"){
+      itemCard.css("background-color", "red");
+      localStorage.setItem("prapor///60rounds", "0");
+    }else if(buttonType == "inStash"){
+      itemCard.css("background-color", "yellow");
+      localStorage.setItem("prapor///60rounds", "1");
+    }else if(buttonType == "turnedIn"){
+      itemCard.css("background-color", "green");
+      localStorage.setItem("prapor///60rounds", "2");
+    }
+
+  });
+});
+</script>
